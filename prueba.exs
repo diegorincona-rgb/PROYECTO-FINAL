@@ -1,6 +1,4 @@
-IO.puts "hola"
-IO.puts "prueba"
-de
-defmodule  do
-
-end
+IO.puts("hola")
+IO.puts("prueba")
+IO.puts("prueba2")
+IO.puts("prueba23")
