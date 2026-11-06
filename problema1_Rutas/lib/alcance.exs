@@ -1,7 +1,5 @@
 
 # Autor: Diego Rincon
-# Ciudades alcanzables desde un origen, con un Stream infinito de conjuntos.
-# Supone que el grafo es un mapa %{ciudad => [{vecino, distancia}]} (contrato con Persona A).
 
 defmodule Alcance do
   @moduledoc """

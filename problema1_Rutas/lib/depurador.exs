@@ -1,7 +1,5 @@
 
 #Autor: Diego Rincon
-# Depuración recursiva de conexiones.
-# Restricción del enunciado: este módulo NO usa Enum ni Stream; todo es recursión propia.
 
 defmodule Depurador do
   @moduledoc """
