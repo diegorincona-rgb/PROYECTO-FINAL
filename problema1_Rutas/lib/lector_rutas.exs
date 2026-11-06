@@ -79,7 +79,7 @@ defmodule LectorRutas do
   defp parsear_consulta(texto) do
     case String.split(texto, ",") |> Enum.map(&String.trim/1) do
       [origen, destino] when origen != "" and destino != "" -> {:ok, {origen, destino}}
-      _ -> {:error, "campos incorrectos (se esperan exactamente origen,destino)"}
+      _ -> {:error, "Campos incorrectos (se esperan exactamente origen,destino)"}
     end
   end
 end
