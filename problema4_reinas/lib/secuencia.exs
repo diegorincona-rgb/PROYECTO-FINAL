@@ -1,3 +1,5 @@
+#Autor: Carlos Andres
+
 defmodule Secuencia do
   @secuencia_reinas Path.join(__DIR__, "secuencia_reinas.csv")
 

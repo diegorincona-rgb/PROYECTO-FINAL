@@ -1,3 +1,5 @@
+#Autor: Carlos Andres
+
 defmodule Reinas do
 
   def soluciones(n) when n > 0 do
