@@ -57,8 +57,8 @@ defmodule LectorReinas do
   defp parsear_tamano(texto) do
     case Integer.parse(texto) do
       {n, ""} when n > 0 -> {:ok, n}
-      {_n, ""} -> {:error, "el tamaño debe ser un entero positivo"}
-      _ -> {:error, "no es un número entero"}
+      {_n, ""} -> {:error, "El tamaño debe ser un entero positivo"}
+      _ -> {:error, "No es un número entero"}
     end
   end
 
