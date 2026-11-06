@@ -1,8 +1,33 @@
 # ciudad_a,ciudad_b,distancia_km
+# --- Conexiones válidas: zona principal ---
 Armenia,Pereira,45
 Pereira,Manizales,52
 Armenia,Cartago,60
 Cartago,Pereira,25
+Armenia,Calarcá,12
+Calarcá,Montenegro,18
+Montenegro,Pereira,50
+Armenia,Manizales,130
+Manizales,Santa Rosa,35
+Pereira,Santa Rosa,20
+Montenegro,Quimbaya,14.5
+Quimbaya,Pereira,38.5
+
+# --- Zona aislada (no conecta con la principal) ---
+Leticia,Puerto Nariño,75
+
+# --- Líneas mal formadas: van a errores_conexiones.txt ---
+Armenia,Quimbaya
+Pereira,Armenia,Cartago,10
+Salento,,30
+Salento,Armenia,abc
+Salento,Armenia,30km
+Salento,Armenia,-5
+
+# --- Líneas que debe corregir el depurador ---
 Pereira,Armenia,45
-Manizales,Manizales,0
+Armenia,Pereira,45
+Santa Rosa,Santa Rosa,0
 Cartago,Pereira,30
+Manizales,Armenia,140
+Leticia , Puerto Nariño , 75

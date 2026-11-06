@@ -1,2 +1,15 @@
+# origen,destino
 Armenia,Manizales
 Cartago,Manizales
+Pereira,Armenia
+Calarcá,Santa Rosa
+
+# --- Casos especiales ---
+Armenia,Leticia
+Salento,Pereira
+Armenia,Narnia
+Pereira,Pereira
+  Armenia , Cartago  
+
+# --- Consulta mal formada ---
+Armenia
