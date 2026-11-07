@@ -371,10 +371,11 @@ markdown
 
 Cada sección tiene la prueba de escritorio (tabla), el árbol de llamadas y la salida real de su script de prueba.
 
-| Pieza | Módulo | Caso de prueba                         | Script de prueba        |
-|-------|--------|----------------------------------------|-------------------------|
-| [P1-b Depurador](#p1-b-depurador-recursivo) | `depurador.exs` | Conexiones del enunciado (líneas 2 a 8) | `prueba_depurador.exs` |
- 
+
+## PRUEBA  prueba_depurador.exs 
+
+
+
 Conexiones conservadas: 0 (esperado 4)
 Observaciones: DIFERENTES
 
@@ -400,7 +401,7 @@ Observaciones: 6 (esperado 6)
 Conexiones conservadas: 13 (esperado 13)
 
 
-| [P1-d Alcance](#p1-d-alcance-stream-infinito) | `alcance.exs` | Armenia en el grafo del enunciado      | `prueba_alcance.exs`    |
+## PRUEBA  prueba_alcance.exs 
  
 === PARTE 1: ejemplo del enunciado ===
 
@@ -437,8 +438,7 @@ Manizales desde Armenia: true (esperado true)
 Leticia desde Armenia: false (esperado false = sin rutas)
 
 
-| [P4-c Verificador](#p4-c-verificador-recursivo) | `verificador.exs` | Propuesta `0 2 1 3`                   | `prueba_verificador.exs` |
- 
+## PRUEBA  prueba_verificador.exs 
  
 === PARTE 1: resultado de cada propuesta ===
 
@@ -483,6 +483,13 @@ a b c -> inválida: formato inválido ("a" no es un entero)
 
 docs/reflexion_ia.md (esqueleto, se llena al final con los aportes de A y B)
 # Reflexión sobre el uso de inteligencia artificial
+
+
+| [P4-b Verificador](#p4-b-verificador-recursivo) | `verificador.exs` | Propuesta `0 2 1 3`                   | `prueba_verificador.exs` |
+ 
+
+
+
 
 
 ## BITACORAS
@@ -581,6 +588,9 @@ Solución: esa función solo acepta {:cont, acumulador} o {:halt, acumulador}, y
 5. El CSV de la secuencia se crea en una carpeta equivocada
 
 Solución: __DIR__ dentro de un módulo de lib/ apunta a lib/, no a la carpeta del problema. Por eso la ruta de salida se construye en el programa principal con Path.join(__DIR__, "salida") y se escribe salida/secuencia_reinas.csv.
+
+
+
 
 
 
