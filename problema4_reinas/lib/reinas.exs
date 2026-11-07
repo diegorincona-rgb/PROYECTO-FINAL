@@ -15,7 +15,7 @@ defmodule Reinas do
     Stream.map([solucion], fn x -> x end)
   end
 
-   #Intenta ubicar una reina en cada columna de la fila actual.
+   #Intenta ubicar una reina en cada columna de la fila actual
   def colocar_reina(n, fila, colocadas) do
     Stream.flat_map(0..(n - 1), fn columna -> #Recorre las columnas del tablero
       if segura?(columna, colocadas) do
