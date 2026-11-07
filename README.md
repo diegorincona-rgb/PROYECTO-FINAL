@@ -1,18 +1,62 @@
 Repositorio, README y .gitignore (DIEGO RINCON, NATALIA GARCIA, CARLOS RUIZ)
 
-Paso 1: verificar lo que ya existe
+Parcial 2 explicado de forma simple
+Qué es
+
+El parcial pide elegir 2 de 4 problemas. nuestro grupo eligió el Problema 1 (Rutas entre ciudades) y el Problema 4 (N reinas), porque juntos cumplen las condiciones: uno con Streams infinitos y otro con structs.
+
+Los dos problemas practican lo mismo:
+
+Idea	Problema 1	Problema 4
+Búsqueda recursiva	Encontrar todas las rutas entre dos ciudades	Encontrar todas las formas de colocar N reinas sin que se ataquen
+Validación recursiva (sin Enum ni Stream)	Depurar conexiones repetidas o inválidas	Verificar tableros propuestos
+Stream infinito	Ciudades alcanzables paso a paso, hasta que no cambian	Secuencia de N con tiempos, hasta superar 10 segundos
+
+Problema 1: Rutas entre ciudades
+
+Para qué sirve: dado un origen y un destino, encontrar todas las rutas posibles, con su distancia total, y decir cuál es la más corta y cuál tiene menor distancia.
+
+Cómo funciona:
+
+Se leen las conexiones y se separan las mal formadas.
+Se depuran las repetidas.
+Se construye el grafo.
+Se revisa con un Stream si el destino es alcanzable.
+Si lo es, se buscan todas las rutas con recursión.
+
+El paso 4 va antes de buscar porque es barato y evita una búsqueda inútil.
+
+Problema 4: N reinas
+
+Para qué sirve: colocar N reinas en un tablero sin que se ataquen, y contar todas las soluciones.
+
+Cómo funciona:
+
+La búsqueda recursiva devuelve las soluciones como un Stream, que se calculan solo cuando se piden.
+Para N = 20 se pide solo la primera solución, así termina rápido.
+Un verificador recursivo revisa tableros propuestos por otros.
+Una secuencia infinita calcula N = 1, 2, 3... con su tiempo, y se detiene cuando un cálculo pasa de 10 segundos.
+Quién hace qué
+Persona	Piezas
+
+## Natalia	Lectura de archivos, grafo y búsqueda de rutas, y programa principal del Problema 4
+
+## Carlos	Reinas con Stream, secuencia de N, y programa principal del Problema 1
+
+## Diego	Depurador, alcance, verificador y documentación
+
+Cada uno trabaja solo en sus archivos, para no dañar el trabajo de los demás.
+
+
+
+Paso 1: estructuracion del parcial y reparticion de manera equitativa 
 
 | Comprobación | Cómo |
 |---|---|
 | El repositorio existe en GitHub | Abre la URL en el navegador |
 | Es público o está compartido con el docente | GitHub > Settings > General > Danger Zone muestra la visibilidad. Si es privado, invita al docente como colaborador |
 | NATALIA y CARLOS pueden hacer push | Settings > Collaborators. Deben aparecer los tres |
-| Tu identidad de Git es correcta | Ejecuta en la terminal el bloque de abajo |
 
-git config --global user.name "Diego rincón"
-git config --global user.email " diego.rincona@uqvirtual.edu.co"
-git config --global pull.rebase true
-Si el correo no coincide con el de tu cuenta de GitHub, tus commits no aparecerán a tu nombre y la evidencia de reparto se pierde.
 
 Paso 2: invitar a NATALIA y CARLOS  (solo el dueño del repositorio puede)
 1.	En GitHub, abre el repositorio.
