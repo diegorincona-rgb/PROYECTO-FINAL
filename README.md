@@ -89,24 +89,58 @@ En PowerShell las barras `\` también funcionan.
 
 ```
 PROYECTO FINAL/
-├── README.md
-├── .gitignore
-├── docs/
-│   ├── reflexion_ia.md
-│   └── persona_c/            pruebas de escritorio y bitácora de IA
 ├── problema1_Rutas/
-│   ├── datos/                conexiones.csv, consultas.txt
-│   ├── lib/                  módulos (.exs)
-│   ├── prueba/               scripts de prueba y datos de prueba
-│   ├── programa_rutas.exs    programa principal
-│   └── salida/               archivos generados
-└── problema4_reinas/
-    ├── datos/                tamanos.txt, propuestas.txt
-    ├── lib/                  módulos (.exs)
-    ├── prueba/               scripts de prueba
-    ├── programa_reinas.exs   programa principal
-    └── salida/               archivos generados
-```
+│   ├── datos/
+│   │   ├── conexiones.csv
+│   │   └── consultas.txt
+│   ├── lib/
+│   │   ├── alcance.exs
+│   │   ├── buscador.exs
+│   │   ├── conexion.exs
+│   │   ├── depurador.exs
+│   │   ├── grafo.exs
+│   │   ├── lector_rutas.exs
+│   │   └── ruta.exs
+│   └── prueba/
+│       ├── datos_prueba/
+│       │   └── conexiones_enunciado.csv
+│       ├── salida_prueba/
+│       │   ├── alcance_csv.txt
+│       │   ├── alcance_enunciado.txt
+│       │   ├── depuracion_conexiones_c...
+│       │   └── depuracion_enunciado.txt
+│       ├── prueba_alcance.exs
+│       └── prueba_depurador.exs
+│
+├── problema4_reinas/
+│   ├── datos/
+│   │   ├── propuestas.txt
+│   │   └── tamanos.txt
+│   ├── lib/
+│   │   ├── escritor_reinas.exs
+│   │   ├── lector_reinas.exs
+│   │   ├── reinas.exs
+│   │   ├── secuencia.exs
+│   │   ├── tablero.exs
+│   │   └── verificador.exs
+│   ├── prueba/
+│   │   ├── salida_prueba/
+│   │   └── prueba_verificador.exs
+│   ├── salida/
+│   │   ├── errores_tamanos.txt
+│   │   ├── primera_solucion_n20.txt
+│   │   ├── reinas_n1.txt
+│   │   ├── reinas_n2.txt
+│   │   ├── reinas_n4.txt
+│   │   ├── reinas_n5.txt
+│   │   ├── reinas_n6.txt
+│   │   ├── reinas_n8.txt
+│   │   ├── secuencia_reinas.csv
+│   │   └── verificacion_reinas.txt
+│   └── programa_reinas.exs
+│
+├── .gitignore
+└── README.md
 
 ## Problema 1: Rutas entre ciudades
 
@@ -215,42 +249,42 @@ markdown
 ---
 
 ## Consulta 1: Reparto de trabajo
-- **Qué pedí:** ayuda para repartir los dos problemas entre tres personas con carga equilibrada.
+- **Qué pedimos:** ayuda para repartir los dos problemas entre tres personas con carga equilibrada.
 - **Qué respondió la IA:** la guía de equipo, con piezas con peso (3 pesada, 2 media, 1 liviana), archivos por dueño, contrato de firmas y cronograma.
 - **Qué hice con eso:** el equipo la adoptó. Lo realizo mi compañera Natalia donde repartio y se genero una totalidad en puntos repartidos y que su total dan 6 puntos.
 - **Recurso distinto a lo visto en clase:** ninguno.
-- **Qué aprendí:** que definir las firmas de las funciones el primer día permite programar sin esperar a los demás, que podemos ir adelantando trabajos y dado al repositorio podemos organizarnos para dar un mejor orden y modificación frente al parcial 2
+- **Qué aprendimos:** que definir las firmas de las funciones el primer día permite programar sin esperar a los demás, que podemos ir adelantando trabajos y dado al repositorio podemos organizarnos para dar un mejor orden y modificación frente al parcial 2
 
 ## Consulta 2: Depurador recursivo
-- **Qué pedí:** cómo depurar las conexiones con recursión, sin `Enum` ni `Stream`.
+- **Qué pedimos:** cómo depurar las conexiones con recursión, sin `Enum` ni `Stream`.
 - **Qué respondió la IA:** una función con tres argumentos (pendientes, conservadas, observaciones), un caso base con lista vacía y otra función recursiva para buscar el par entre las conservadas.
 - **Qué hice con eso:** Diego lo implemento en `depurador.exs` y lo probé con el archivo del enunciado: quedan las líneas 2 a 5 y las 3 observaciones.
 - **Recurso distinto a lo visto en clase:** ninguno.
-- **Qué aprendí:** acumular por la cabeza de la lista es más simple, y al final hay que invertir las listas para respetar el orden del archivo.
+- **Qué aprendimos:** acumular por la cabeza de la lista es más simple, y al final hay que invertir las listas para respetar el orden del archivo.
 
 ## Consulta 3: Stream de alcance
-- **Qué pedí:** cómo construir la secuencia infinita de ciudades alcanzables y detenerla al estabilizarse.
+- **Qué pedimos:** cómo construir la secuencia infinita de ciudades alcanzables y detenerla al estabilizarse.
 - **Qué respondió la IA:** `Stream.iterate` para la secuencia infinita y `Stream.transform` con el paso anterior como acumulador, que devuelve `:halt` cuando dos pasos son iguales.
 - **Qué hice con eso:** diego lo uso en `alcance.exs`. La prueba muestra que se calculan los pasos 0 a 3 y nunca el 4.
 - **Recurso distinto a lo visto en clase:** `Stream.transform/3` y repetir una variable en un patrón (`paso, paso ->`) para comparar si dos valores son iguales.
-- **Qué aprendí:** el Stream es perezoso, así que no calcula nada hasta que `Enum.to_list` lo consume. El paso 3 se calcula solo para compararlo con el 2.
+- **Qué aprendimos:** el Stream es perezoso, así que no calcula nada hasta que `Enum.to_list` lo consume. El paso 3 se calcula solo para compararlo con el 2.
 
 ## Consulta 4: Verificador de tableros
-- **Qué pedí:** cómo verificar tableros propuestos con recursión y reportar todos los pares que se atacan.
+- **Qué pedimos:** cómo verificar tableros propuestos con recursión y reportar todos los pares que se atacan.
 - **Qué respondió la IA:** dos funciones recursivas, una para columnas fuera de rango y otra que compara cada reina con las filas siguientes (misma columna o diferencia de columnas igual a diferencia de filas).
 - **Qué hice con eso:** diego lo implemento en `verificador.exs`. La prueba da 11 de 11 casos correctos.
 - **Recurso distinto a lo visto en clase:** ninguno.
-- **Qué aprendí:** para saber si dos reinas están en diagonal basta comparar el valor absoluto de la diferencia de columnas con la diferencia de filas.
+- **Qué aprendimos:** para saber si dos reinas están en diagonal basta comparar el valor absoluto de la diferencia de columnas con la diferencia de filas.
 
 ## Consulta 5: Error de rutas al ejecutar scripts
-- **Qué pedí:** por qué el script de prueba no encontraba `alcance.exs`.
+- **Qué pedimos:** por qué el script de prueba no encontraba `alcance.exs`.
 - **Qué respondió la IA:** que las rutas relativas dependen de la carpeta desde donde se ejecuta, y que conviene construirlas con `Path.expand` y `__DIR__`.
 - **Qué hice con eso:** ajusté la variable `base` de los scripts de prueba.
 - **Recurso distinto a lo visto en clase:** `__DIR__` y `Code.require_file/1`.
-- **Qué aprendí:** `__DIR__` da la carpeta del archivo, así que los comandos funcionan desde cualquier lugar.
+- **Qué aprendimos:** `__DIR__` da la carpeta del archivo, así que los comandos funcionan desde cualquier lugar.
 
 ## Consulta 6: Repositorio, README y .gitignore
-- **Qué pedí:** ayuda para crear el `README.md`, el `.gitignore` y la estructura de carpetas del repositorio, y para verificar que quedaran bien ubicados. Después pedí reemplazar las letras A, B y C por los nombres del equipo y organizar mejor las tablas del README.
+- **Qué pedimos:** ayuda para crear el `README.md`, el `.gitignore` y la estructura de carpetas del repositorio, y para verificar que quedaran bien ubicados. Después pedí reemplazar las letras A, B y C por los nombres del equipo y organizar mejor las tablas del README.
 - **Qué respondió la IA:**
   - El contenido del `.gitignore` (compilados de Elixir, `salida_prueba/` y archivos del sistema) y del `README.md` (integrantes, cómo ejecutar, estructura, módulos por problema, pruebas y decisiones de diseño).
   - El orden de los commits, uno por tema.
@@ -258,14 +292,14 @@ markdown
   - Una advertencia: ambos archivos deben ir en la raíz, no dentro de `problema1_Rutas`.
 - **Qué hice con eso:** cree los dos archivos y al principio quedaron dentro de `problema1_Rutas/datos`. Los moví a la raíz, corregí el nombre `READMI` a `README.md` y comprobé en el explorador de VS Code que quedaran al mismo nivel que las dos carpetas de los problemas. Luego cambié las letras por Natalia, Carlos y Diego, y agregué a las tablas el orden de los módulos, la pieza y las funciones principales.
 - **Recurso distinto a lo visto en clase:** ninguno.
-- **Qué aprendí:**
+- **Qué aprendmos:**
   - Un `.gitignore` solo aplica a la carpeta donde está, así que en la raíz cubre todo el proyecto.
   - El README en la raíz es la portada del repositorio en GitHub; con otro nombre no se muestra.
   - `salida/` se sube como evidencia de la ejecución, mientras `salida_prueba/` se ignora porque son archivos temporales.
   - Conviene hacer un commit por tema, para que el historial muestre quién hizo cada parte.
 
 ## Consulta 7: Error en el árbol de llamadas y organización de la documentación
-- **Qué pedí:** por qué me aparecía un error al mostrar el árbol de llamadas de mis piezas (depurador, alcance y verificador), y cómo organizarlo en el repositorio sin dañar la estructura de mis compañeros. *(Describir aquí el error exacto: por ejemplo, el árbol se veía cortado, mezclado con el texto o con símbolos raros.)*
+- **Qué pedimos:** por qué me aparecía un error al mostrar el árbol de llamadas de mis piezas (depurador, alcance y verificador), y cómo organizarlo en el repositorio sin dañar la estructura de mis compañeros. *(Describir aquí el error exacto: por ejemplo, el árbol se veía cortado, mezclado con el texto o con símbolos raros.)*
 - **Qué respondió la IA:**
   - Que los árboles de texto deben ir dentro de un bloque de código con su cierre; si falta el cierre, todo lo que sigue en el archivo se rompe.
   - Que cada persona guarde su documentación en su propia carpeta, sin tocar las de Natalia  ni Carlos 
@@ -273,12 +307,16 @@ markdown
   - Que antes de empezar se haga Pull, y que nunca se use `push --force`.
 - **Qué hice con eso:** revisé que cada árbol estuviera abierto y cerrado con su bloque de código, dejé mi material solo en el README toqué únicamente las secciones de mis piezas, en commits separados.
 - **Recurso distinto a lo visto en clase:** ninguno.
-- **Qué aprendí:**
+- **Qué aprendimos:**
   - Un bloque de código sin cierre daña el formato del resto del archivo.
   - Cada integrante es dueño de su carpeta, y así los cambios de uno no pisan los de otro.
   - Pull antes de empezar y commits pequeños evitan conflictos entre los tres.
 docs/persona_c/pruebas_escritorio.md
 markdown
+
+
+
+
 # Pruebas de escritorio y árboles de llamadas - Diego (C)
 
 Cada sección tiene la prueba de escritorio (tabla), el árbol de llamadas y la salida real de su script de prueba.
