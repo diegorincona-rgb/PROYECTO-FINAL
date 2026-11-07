@@ -1,0 +1,16 @@
+# tamaños del tablero
+4
+5
+6
+8
+
+# --- Casos extremos válidos ---
+  1  
+2
+
+# --- Líneas inválidas: van a errores_tamanos.txt ---
+abc
+0
+-3
+4.5
+8x
