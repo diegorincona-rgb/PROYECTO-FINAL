@@ -1,0 +1,14 @@
+# Compilados de Elixir (no se usan, pero por si aparece alguno suelto)
+ebin/
+*.beam
+_build/
+deps/
+erl_crash.dump
+.elixir_ls/
+
+# Salidas de ensayo de las pruebas
+**/salida_prueba/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
