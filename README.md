@@ -141,6 +141,8 @@ PROYECTO FINAL/
 │
 ├── .gitignore
 └── README.md
+```
+
 
 ## Problema 1: Rutas entre ciudades
 
