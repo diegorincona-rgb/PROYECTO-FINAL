@@ -148,28 +148,28 @@ PROYECTO FINAL/
 
 ### Módulos
 
-| Orden | Módulo | Autor | Pieza | Función | Funciones principales |
-|---|---|---|---|---|---|
-| 1 | `conexion.exs` | Natalia | P1-a | Struct `%Conexion{}` y lectura de una línea | `parse/1` |
-| 2 | `ruta.exs` | Natalia | P1-c | Struct `%Ruta{}` y formato de texto | `num_ciudades/1`, `a_texto/1` |
-| 3 | `lector_rutas.exs` | Natalia | P1-a | Lectura perezosa de conexiones y consultas | `conexiones/1`, `consultas/1` |
-| 4 | `depurador.exs` | Diego | P1-b | Depuración recursiva (sin `Enum` ni `Stream`) | `depurar/1` |
-| 5 | `grafo.exs` | Natalia | P1-c | Construcción del grafo | `construir/1`, `existe?/2`, `vecinos/2` |
-| 6 | `alcance.exs` | Diego | P1-d | Stream infinito de ciudades alcanzables | `pasos/2`, `hasta_estabilizar/2`, `lineas/2` |
-| 7 | `buscador.exs` | Natalia | P1-c | Búsqueda recursiva de rutas | `todas_las_rutas/3`, `mas_cortas/1`, `menor_distancia/1` |
-| 8 | `escritor_rutas.exs` | Carlos | P1-e | Salida de rutas en pantalla y archivo | `lineas_consulta/3`, `escribir/2` |
-| 9 | `programa_rutas.exs` | Carlos | P1-e | Programa principal que coordina todo | `main/0` |
+| Orden | Módulo            | Autor   | Pieza | Función                                      | Funciones principales |
+|---|---|-------------------|---------|-------|----------------------------------------------|
+| 1 | `conexion.exs`        | Natalia | P1-a  | Struct `%Conexion{}` y lectura de una línea  | `parse/1` |
+| 2 | `ruta.exs`            | Natalia | P1-c  | Struct `%Ruta{}` y formato de texto          | `num_ciudades/1`, `a_texto/1` |
+| 3 | `lector_rutas.exs`    | Natalia | P1-a  | Lectura perezosa de conexiones y consultas   | `conexiones/1`, `consultas/1` |
+| 4 | `depurador.exs`       | Diego   | P1-b  | Depuración recursiva (sin `Enum` ni `Stream`)| `depurar/1` |
+| 5 | `grafo.exs`           | Natalia | P1-c  | Construcción del grafo                       | `construir/1`, `existe?/2`, `vecinos/2` |
+| 6 | `alcance.exs`         | Diego   | P1-d  | Stream infinito de ciudades alcanzables      | `pasos/2`, `hasta_estabilizar/2`, `lineas/2` |
+| 7 | `buscador.exs`        | Natalia | P1-c  | Búsqueda recursiva de rutas                  | `todas_las_rutas/3`, `mas_cortas/1`, `menor_distancia/1` |
+| 8 | `escritor_rutas.exs`  | Carlos  | P1-e  | Salida de rutas en pantalla y archivo        | `lineas_consulta/3`, `escribir/2` |
+| 9 | `programa_rutas.exs`  | Carlos  | P1-e  | Programa principal que coordina todo         | `main/0` |
 
 ### Salidas
 
 Todas se crean en `problema1_Rutas/salida/` y se reemplazan en cada ejecución.
 
 | Orden | Archivo | Qué contiene | Lo genera | Pieza |
-|---|---|---|---|---|
-| 1 | `errores_conexiones.txt` | Líneas mal formadas de `conexiones.csv`: número de línea, contenido y motivo | Natalia | P1-a |
-| 2 | `depuracion_conexiones.txt` | Conexiones descartadas (repetidas, de una ciudad consigo misma, con distancia distinta): número de línea, contenido y motivo | Diego | P1-b |
-| 3 | `alcance.txt` | Pasos de ciudades alcanzables por consulta, hasta que el conjunto se estabiliza | Diego | P1-d |
-| 4 | `rutas_encontradas.txt` | Rutas de cada consulta con número de ciudades y distancia, total de rutas, ruta más corta y ruta de menor distancia | Carlos | P1-e |### Flujo de ejecución
+|---|------------------------------|---|---|---|
+| 1 | `errores_conexiones.txt`     | Líneas mal formadas de `conexiones.csv`: número de línea, contenido y motivo | Natalia | P1-a |
+| 2 | `depuracion_conexiones.txt`  | Conexiones descartadas (repetidas, de una ciudad consigo misma, con distancia distinta): número de línea, contenido y motivo | Diego  | P1-b |
+| 3 | `alcance.txt`                | Pasos de ciudades alcanzables por consulta, hasta que el conjunto se estabiliza | Diego | P1-d |
+| 4 | `rutas_encontradas.txt`      | Rutas de cada consulta con número de ciudades y distancia, total de rutas, ruta más corta y ruta de menor distancia | Carlos | P1-e |### Flujo de ejecución
 
 1. Se verifica que existan `conexiones.csv` y `consultas.txt`.
 2. Se leen las conexiones de forma perezosa; las mal formadas van a `errores_conexiones.txt`.
@@ -181,14 +181,14 @@ Salidas: `errores_conexiones.txt`, `depuracion_conexiones.txt`, `alcance.txt`, `
 
 ## Problema 4: N reinas
 
-| Módulo | Autor | Función |
-|---|---|---|
-| `reinas.exs` | B | Búsqueda recursiva que devuelve un Stream |
-| `tablero.exs` | A | Formato del tablero |
-| `lector_reinas.exs` | A | Lectura de `tamanos.txt` y `propuestas.txt` |
-| `escritor_reinas.exs` | A | Escritura de soluciones |
-| `verificador.exs` | C | Verificación recursiva (sin `Enum` ni `Stream`) |
-| `secuencia.exs` | B | Stream infinito de N con tiempos |
+| Módulo                | Autor | Función                                         |
+|-----------------------|-------|-------------------------------------------------|
+| `reinas.exs`          | B     | Búsqueda recursiva que devuelve un Stream       |
+| `tablero.exs`         | A     | Formato del tablero                             |
+| `lector_reinas.exs`   | A     | Lectura de `tamanos.txt` y `propuestas.txt`     |
+| `escritor_reinas.exs` | A     | Escritura de soluciones                         |
+| `verificador.exs`     | C     | Verificación recursiva (sin `Enum` ni `Stream`) |
+| `secuencia.exs`       | B     | Stream infinito de N con tiempos                |
 
 Salidas: `errores_tamanos.txt`, `reinas_n<N>.txt`, `primera_solucion_n20.txt`, `verificacion_reinas.txt`, `secuencia_reinas.csv`.
 
@@ -202,11 +202,11 @@ elixir problema1_Rutas/prueba/prueba_alcance.exs
 elixir problema4_reinas/prueba/prueba_verificador.exs
 ```
 
-| Script | Pieza | Qué prueba | Resultado esperado |
-|---|---|---|---|
-| `prueba_depurador.exs` | P1-b | Depuración de las conexiones del enunciado y de un archivo con líneas mal formadas y repetidas | Quedan las líneas 2 a 5; observaciones 6 de 6; conexiones conservadas 13 de 13 |
-| `prueba_alcance.exs` | P1-d | Pasos de alcance desde Armenia y qué pasos calcula realmente el Stream | Pasos 0, 1 y 2; se calcula el paso 3 solo para comparar; `pasos devueltos: 3` |
-| `prueba_verificador.exs` | P4-c | Verificación de tableros propuestos: válidos, con diagonales, misma columna, fuera de rango y con texto | `Casos correctos: 11 de 11` |
+| Script                       | Pieza| Qué prueba                                                                | Resultado esperado |
+|------------------------------|------|---------------------------------------------------------------------------|---|
+| `prueba_depurador.exs`       | P1-b | Depuración de las conexiones del enunciado y de un archivo con líneas mal formadas y repetidas | Quedan las líneas 2 a 5; observaciones 6 de 6; conexiones conservadas 13 de 13 |
+| `prueba_alcance.exs`         | P1-d | Pasos de alcance desde Armenia y qué pasos calcula realmente el Stream    | Pasos 0, 1 y 2; se calcula el paso 3 solo para comparar; `pasos devueltos: 3` |
+| `prueba_verificador.exs`     | P4-c | Verificación de tableros propuestos: válidos, con diagonales, misma columna, fuera de rango y con texto                                                                                                             | `Casos correctos: 11 de 11` |
 
 Los resultados de cada prueba se escriben en `salida_prueba/`, una carpeta que no se sube al repositorio (está en `.gitignore`).```
 
@@ -238,15 +238,15 @@ markdown
 
 ## Resumen
 
-| # | Tema | Pieza | ¿Recurso distinto a clase? |
-|---|---|---|---|
-| 1 | Reparto de trabajo y guía de equipo | Doc | No |
-| 2 | Depurador recursivo con acumuladores | P1-b | No |
-| 3 | `Stream.iterate` y `Stream.transform` para el alcance | P1-d | Sí: `Stream.transform/3` |
-| 4 | Verificador: columnas fuera de rango y diagonales | P4-c | No |
-| 5 | Error de rutas al ejecutar los scripts | Pruebas | Sí: `__DIR__` y `Code.require_file` |
-| 6 | Repositorio, README y `.gitignore` | Doc | No |
-| 7 | Pruebas de escritorio y árboles de llamadas | P1-b, P1-d, P4-c | No |
+| # | Tema                                                  | Pieza     | ¿Recurso distinto a clase? |
+|---|-------------------------------------------------------|-----------|---|
+| 1 | Reparto de trabajo y guía de equipo                   | Doc       | No |
+| 2 | Depurador recursivo con acumuladores                  | P1-b      | No |
+| 3 | `Stream.iterate` y `Stream.transform` para el alcance | P1-d      | Sí: `Stream.transform/3` |
+| 4 | Verificador: columnas fuera de rango y diagonales     | P4-c      | No |
+| 5 | Error de rutas al ejecutar los scripts                | Pruebas   | Sí: `__DIR__` y `Code.require_file` |
+| 6 | Repositorio, README y `.gitignore`                    | Doc       | No |
+| 7 | Pruebas de escritorio y árboles de llamadas           | P1-b, P1-d, P4-c | No |
 
 ---
 
