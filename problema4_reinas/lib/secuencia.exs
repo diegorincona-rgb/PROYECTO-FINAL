@@ -1,10 +1,10 @@
 #Autor: Carlos Andres
 
 defmodule Secuencia do
-  @secuencia_reinas Path.join(__DIR__, "../datos/secuencia_reinas.csv")
+  @secuencia_reinas Path.join(__DIR__, "../salida/secuencia_reinas.csv")
 
 
-  # Genera una secuencia infinita: 1, 2, 3, 4...
+  # Genera una secuencia infinita: 1, 2, ....
   def terminos do
     Stream.iterate(1, fn n -> n + 1 end)
   end
@@ -39,7 +39,7 @@ defmodule Secuencia do
 
             IO.puts(archivo, linea)
           end)
-          |> Stream.run() #Consume el Stream y ejecuta todas las operaciones anteriores.
+          |> Stream.run() #Consume el Stream y ejecuta todas las operaciones anteriores
 
           :ok
         after
