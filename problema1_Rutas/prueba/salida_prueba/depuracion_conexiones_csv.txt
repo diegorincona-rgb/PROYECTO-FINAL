@@ -1,0 +1,6 @@
+Línea 28: Pereira,Armenia,45 -> repetida (línea 3); se descarta
+Línea 29: Armenia,Pereira,45 -> repetida (línea 3); se descarta
+Línea 30: Santa Rosa,Santa Rosa,0 -> conecta una ciudad consigo misma; se descarta
+Línea 31: Cartago,Pereira,30 -> distancia distinta a la de la línea 6 (25); se conserva la de la línea 6
+Línea 32: Manizales,Armenia,140 -> distancia distinta a la de la línea 10 (130); se conserva la de la línea 10
+Línea 33: Leticia , Puerto Nariño , 75 -> repetida (línea 17); se descarta
