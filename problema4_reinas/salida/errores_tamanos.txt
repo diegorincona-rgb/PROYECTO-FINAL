@@ -1,0 +1,5 @@
+Línea 12: abc -> No es un número entero
+Línea 13: 0 -> El tamaño debe ser un entero positivo
+Línea 14: -3 -> El tamaño debe ser un entero positivo
+Línea 15: 4.5 -> No es un número entero
+Línea 16: 8x -> No es un número entero

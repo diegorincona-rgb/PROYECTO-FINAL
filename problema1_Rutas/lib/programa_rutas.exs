@@ -1,3 +1,4 @@
+#Autor: Carlos Andres
 Code.require_file(Path.join(__DIR__, "conexion.exs"))
 Code.require_file(Path.join(__DIR__, "ruta.exs"))
 Code.require_file(Path.join(__DIR__, "lector_rutas.exs"))
@@ -9,8 +10,8 @@ Code.require_file(Path.join(__DIR__, "escritor_rutas.exs"))
 defmodule ProgramaRutas do
 
   #Archivos de entrada.
-  @conexiones Path.join(__DIR__, "..datos/conexiones.csv")
-  @consultas Path.join(__DIR__, "datos/consultas.txt")
+  @conexiones Path.join(__DIR__, "../datos/conexiones.csv")
+  @consultas Path.join(__DIR__, "../datos/consultas.txt")
 
   #Archivos de salida.
   @errores_conexiones Path.join(__DIR__, "resultados/errores_conexiones.txt")

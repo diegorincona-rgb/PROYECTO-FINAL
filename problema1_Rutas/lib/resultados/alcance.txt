@@ -1,0 +1,43 @@
+=== Alcance desde Armenia ===
+Paso 0: Armenia
+Paso 1: Armenia, Calarcá, Cartago, Manizales, Pereira
+Paso 2: Armenia, Calarcá, Cartago, Manizales, Montenegro, Pereira, Quimbaya, Santa Rosa
+Se estabiliza en el paso 2
+
+=== Alcance desde Cartago ===
+Paso 0: Cartago
+Paso 1: Armenia, Cartago, Pereira
+Paso 2: Armenia, Calarcá, Cartago, Manizales, Montenegro, Pereira, Quimbaya, Santa Rosa
+Se estabiliza en el paso 2
+
+=== Alcance desde Pereira ===
+Paso 0: Pereira
+Paso 1: Armenia, Cartago, Manizales, Montenegro, Pereira, Quimbaya, Santa Rosa
+Paso 2: Armenia, Calarcá, Cartago, Manizales, Montenegro, Pereira, Quimbaya, Santa Rosa
+Se estabiliza en el paso 2
+
+=== Alcance desde Calarcá ===
+Paso 0: Calarcá
+Paso 1: Armenia, Calarcá, Montenegro
+Paso 2: Armenia, Calarcá, Cartago, Manizales, Montenegro, Pereira, Quimbaya
+Paso 3: Armenia, Calarcá, Cartago, Manizales, Montenegro, Pereira, Quimbaya, Santa Rosa
+Se estabiliza en el paso 3
+
+=== Alcance desde Armenia ===
+Paso 0: Armenia
+Paso 1: Armenia, Calarcá, Cartago, Manizales, Pereira
+Paso 2: Armenia, Calarcá, Cartago, Manizales, Montenegro, Pereira, Quimbaya, Santa Rosa
+Se estabiliza en el paso 2
+
+=== Alcance desde Pereira ===
+Paso 0: Pereira
+Paso 1: Armenia, Cartago, Manizales, Montenegro, Pereira, Quimbaya, Santa Rosa
+Paso 2: Armenia, Calarcá, Cartago, Manizales, Montenegro, Pereira, Quimbaya, Santa Rosa
+Se estabiliza en el paso 2
+
+=== Alcance desde Armenia ===
+Paso 0: Armenia
+Paso 1: Armenia, Calarcá, Cartago, Manizales, Pereira
+Paso 2: Armenia, Calarcá, Cartago, Manizales, Montenegro, Pereira, Quimbaya, Santa Rosa
+Se estabiliza en el paso 2
+

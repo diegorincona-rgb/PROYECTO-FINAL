@@ -1,7 +1,7 @@
 #Autor: Carlos Andres
 
 defmodule Secuencia do
-  @secuencia_reinas Path.join(__DIR__, "secuencia_reinas.csv")
+  @secuencia_reinas Path.join(__DIR__, "../datos/secuencia_reinas.csv")
 
 
   # Genera una secuencia infinita: 1, 2, 3, 4...
