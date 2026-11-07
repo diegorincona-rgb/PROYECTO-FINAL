@@ -1,0 +1,87 @@
+=== Armenia -> Manizales ===
+Ruta 1: Armenia -> Pereira -> Manizales (3 ciudades, 97 km)
+Ruta 2: Armenia -> Pereira -> Santa Rosa -> Manizales (4 ciudades, 100 km)
+Ruta 3: Armenia -> Cartago -> Pereira -> Manizales (4 ciudades, 137 km)
+Ruta 4: Armenia -> Cartago -> Pereira -> Santa Rosa -> Manizales (5 ciudades, 140 km)
+Ruta 5: Armenia -> Calarcá -> Montenegro -> Pereira -> Manizales (5 ciudades, 132 km)
+Ruta 6: Armenia -> Calarcá -> Montenegro -> Pereira -> Santa Rosa -> Manizales (6 ciudades, 135 km)
+Ruta 7: Armenia -> Calarcá -> Montenegro -> Quimbaya -> Pereira -> Manizales (6 ciudades, 135 km)
+Ruta 8: Armenia -> Calarcá -> Montenegro -> Quimbaya -> Pereira -> Santa Rosa -> Manizales (7 ciudades, 138 km)
+Ruta 9: Armenia -> Manizales (2 ciudades, 130 km)
+Número de rutas: 9
+Ruta más corta: Armenia -> Manizales
+Ruta de menor distancia: Armenia -> Pereira -> Manizales (97 km)
+
+=== Cartago -> Manizales ===
+Ruta 1: Cartago -> Armenia -> Pereira -> Manizales (4 ciudades, 157 km)
+Ruta 2: Cartago -> Armenia -> Pereira -> Santa Rosa -> Manizales (5 ciudades, 160 km)
+Ruta 3: Cartago -> Armenia -> Calarcá -> Montenegro -> Pereira -> Manizales (6 ciudades, 192 km)
+Ruta 4: Cartago -> Armenia -> Calarcá -> Montenegro -> Pereira -> Santa Rosa -> Manizales (7 ciudades, 195 km)
+Ruta 5: Cartago -> Armenia -> Calarcá -> Montenegro -> Quimbaya -> Pereira -> Manizales (7 ciudades, 195 km)
+Ruta 6: Cartago -> Armenia -> Calarcá -> Montenegro -> Quimbaya -> Pereira -> Santa Rosa -> Manizales (8 ciudades, 198 km)
+Ruta 7: Cartago -> Armenia -> Manizales (3 ciudades, 190 km)
+Ruta 8: Cartago -> Pereira -> Armenia -> Manizales (4 ciudades, 200 km)
+Ruta 9: Cartago -> Pereira -> Manizales (3 ciudades, 77 km)
+Ruta 10: Cartago -> Pereira -> Montenegro -> Calarcá -> Armenia -> Manizales (6 ciudades, 235 km)
+Ruta 11: Cartago -> Pereira -> Santa Rosa -> Manizales (4 ciudades, 80 km)
+Ruta 12: Cartago -> Pereira -> Quimbaya -> Montenegro -> Calarcá -> Armenia -> Manizales (7 ciudades, 238 km)
+Número de rutas: 12
+Ruta más corta: Cartago -> Armenia -> Manizales | Cartago -> Pereira -> Manizales
+Ruta de menor distancia: Cartago -> Pereira -> Manizales (77 km)
+
+=== Pereira -> Armenia ===
+Ruta 1: Pereira -> Armenia (2 ciudades, 45 km)
+Ruta 2: Pereira -> Manizales -> Armenia (3 ciudades, 182 km)
+Ruta 3: Pereira -> Cartago -> Armenia (3 ciudades, 85 km)
+Ruta 4: Pereira -> Montenegro -> Calarcá -> Armenia (4 ciudades, 80 km)
+Ruta 5: Pereira -> Santa Rosa -> Manizales -> Armenia (4 ciudades, 185 km)
+Ruta 6: Pereira -> Quimbaya -> Montenegro -> Calarcá -> Armenia (5 ciudades, 83 km)
+Número de rutas: 6
+Ruta más corta: Pereira -> Armenia
+Ruta de menor distancia: Pereira -> Armenia (45 km)
+
+=== Calarcá -> Santa Rosa ===
+Ruta 1: Calarcá -> Armenia -> Pereira -> Manizales -> Santa Rosa (5 ciudades, 144 km)
+Ruta 2: Calarcá -> Armenia -> Pereira -> Santa Rosa (4 ciudades, 77 km)
+Ruta 3: Calarcá -> Armenia -> Cartago -> Pereira -> Manizales -> Santa Rosa (6 ciudades, 184 km)
+Ruta 4: Calarcá -> Armenia -> Cartago -> Pereira -> Santa Rosa (5 ciudades, 117 km)
+Ruta 5: Calarcá -> Armenia -> Manizales -> Pereira -> Santa Rosa (5 ciudades, 214 km)
+Ruta 6: Calarcá -> Armenia -> Manizales -> Santa Rosa (4 ciudades, 177 km)
+Ruta 7: Calarcá -> Montenegro -> Pereira -> Armenia -> Manizales -> Santa Rosa (6 ciudades, 278 km)
+Ruta 8: Calarcá -> Montenegro -> Pereira -> Manizales -> Santa Rosa (5 ciudades, 155 km)
+Ruta 9: Calarcá -> Montenegro -> Pereira -> Cartago -> Armenia -> Manizales -> Santa Rosa (7 ciudades, 318 km)
+Ruta 10: Calarcá -> Montenegro -> Pereira -> Santa Rosa (4 ciudades, 88 km)
+Ruta 11: Calarcá -> Montenegro -> Quimbaya -> Pereira -> Armenia -> Manizales -> Santa Rosa (7 ciudades, 281 km)
+Ruta 12: Calarcá -> Montenegro -> Quimbaya -> Pereira -> Manizales -> Santa Rosa (6 ciudades, 158 km)
+Ruta 13: Calarcá -> Montenegro -> Quimbaya -> Pereira -> Cartago -> Armenia -> Manizales -> Santa Rosa (8 ciudades, 321 km)
+Ruta 14: Calarcá -> Montenegro -> Quimbaya -> Pereira -> Santa Rosa (5 ciudades, 91 km)
+Número de rutas: 14
+Ruta más corta: Calarcá -> Armenia -> Pereira -> Santa Rosa | Calarcá -> Armenia -> Manizales -> Santa Rosa | Calarcá -> Montenegro -> Pereira -> Santa Rosa
+Ruta de menor distancia: Calarcá -> Armenia -> Pereira -> Santa Rosa (77 km)
+
+=== Armenia -> Leticia ===
+Sin rutas: el destino no es alcanzable desde el origen.
+
+=== Salento -> Pereira ===
+La ciudad de origen Salento no existe en el grafo.
+
+=== Armenia -> Narnia ===
+La ciudad de destino Narnia no existe en el grafo.
+
+=== Pereira -> Pereira ===
+Ruta 1: Pereira (1 ciudades, 0 km)
+Número de rutas: 1
+Ruta más corta: Pereira
+Ruta de menor distancia: Pereira (0 km)
+
+=== Armenia -> Cartago ===
+Ruta 1: Armenia -> Pereira -> Cartago (3 ciudades, 70 km)
+Ruta 2: Armenia -> Cartago (2 ciudades, 60 km)
+Ruta 3: Armenia -> Calarcá -> Montenegro -> Pereira -> Cartago (5 ciudades, 105 km)
+Ruta 4: Armenia -> Calarcá -> Montenegro -> Quimbaya -> Pereira -> Cartago (6 ciudades, 108 km)
+Ruta 5: Armenia -> Manizales -> Pereira -> Cartago (4 ciudades, 207 km)
+Ruta 6: Armenia -> Manizales -> Santa Rosa -> Pereira -> Cartago (5 ciudades, 210 km)
+Número de rutas: 6
+Ruta más corta: Armenia -> Cartago
+Ruta de menor distancia: Armenia -> Cartago (60 km)
+

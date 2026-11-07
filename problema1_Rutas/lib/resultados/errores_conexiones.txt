@@ -1,0 +1,6 @@
+Línea 20: Armenia,Quimbaya -> Campos incorrectos (se esperan origen,destino,distancia)
+Línea 21: Pereira,Armenia,Cartago,10 -> Campos incorrectos (se esperan origen,destino,distancia)
+Línea 22: Salento,,30 -> Campos incorrectos (se esperan origen,destino,distancia)
+Línea 23: Salento,Armenia,abc -> Distancia no numérica ("abc")
+Línea 24: Salento,Armenia,30km -> Distancia no numérica ("30km")
+Línea 25: Salento,Armenia,-5 -> La distancia no puede ser negativa (-5)

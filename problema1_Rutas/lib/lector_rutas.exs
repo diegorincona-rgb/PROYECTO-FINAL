@@ -39,7 +39,7 @@ defmodule LectorRutas do
     Stream.map(invalidas, fn %{linea: numero, texto: texto, resultado: {:error, motivo}} ->
       "Línea #{numero}: #{texto} -> #{motivo}\n"
     end)
-    |> Stream.into(File.stream!(ruta_archivo))
+    |> Stream.into(File.stream!(ruta_archivo, [:write]))
     |> Stream.run()
   end
 
