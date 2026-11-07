@@ -484,9 +484,12 @@ a b c -> inválida: formato inválido ("a" no es un entero)
 docs/reflexion_ia.md (esqueleto, se llena al final con los aportes de A y B)
 # Reflexión sobre el uso de inteligencia artificial
 
+
+## BITACORAS
+
 ## 1. Herramientas y agentes utilizados:
 
-Chat gpt
+Chat gpt - claude 
 
 ## 2. Un ejemplo concreto 
 
@@ -507,6 +510,79 @@ En conclusión, la inteligencia artificial debe utilizarse como un complemento p
 Paso 6: commits y push
 git pull
 se realiza el commits separados, uno por tema. En VS Code, selecciona los archivos de cada grupo, escribe el mensaje y presiona Commit:
+
+## bitacoras Diego 
+
+Persona C (Depurador, Alcance, Verificador, documentación)
+1. ¿Dónde pongo las pruebas y cómo organizo mis archivos?
+
+Solución: los módulos van solos en lib/. Las pruebas van en una carpeta prueba/ dentro de cada problema, fuera de lib/, para que el programa final no las cargue. Sus resultados salen en salida_prueba/, que se agrega al .gitignore. Los documentos van en docs/persona_c/.
+
+2. Me sale No file named alcance.exs, ¿por qué?
+
+Solución: estaba ejecutando desde la carpeta equivocada, y además alcance.exs solo define un módulo y no hace nada por sí solo. Lo que se ejecuta es la prueba, con la ruta completa desde la raíz del proyecto: elixir problema1_Rutas\prueba\prueba_alcance.exs
+
+3. Sale could not stream ... conexiones_enunciado.csv: no such file or directory
+
+Solución: la prueba lee un archivo de datos que yo no había creado. Hay que crear la carpeta prueba/datos_prueba/ y dentro el archivo conexiones_enunciado.csv con las 7 líneas del enunciado. Después de crearlo la prueba dio Observaciones: OK.
+
+4. PowerShell dice que conexiones_enunciado.csv no se reconoce como cmdlet
+
+Solución: escribí el nombre del archivo en la terminal y PowerShell lo tomó como un comando. Los comandos (elixir, dir, mkdir) van en la terminal, y el nombre y el contenido de un archivo se escriben en el explorador y el editor de VS Code.
+
+5. Git abre un editor de mensaje y los archivos quedan en Staged Changes
+
+Solución: el editor aparece al hacer commit sin escribir el mensaje, y cerrarlo vacío cancela el commit. Hay que escribir el mensaje en el cuadro de Source Control (por ejemplo p1: depurador recursivo) y pulsar Commit y luego Sync Changes. Se hace un commit por pieza para que el historial muestre el trabajo.
+
+
+## bitacoras Natalia
+
+
+1. ¿Cómo hago que Conexion.parse/1 devuelva {:ok, ...} o {:error, ...}?
+
+Solución: se separa en pasos pequeños que devuelven esas tuplas y se encadenan con with. Si algún paso devuelve {:error, motivo}, el with devuelve ese error sin ejecutar los siguientes.
+
+2. Los números de línea salen corridos en el archivo de errores
+
+Solución: se numeraba después de quitar comentarios y líneas vacías. Hay que usar Stream.with_index(1) antes de Stream.reject, para que la línea 28 del archivo se reporte como 28.
+
+3. ¿Cómo evito la excepción si el archivo no existe?
+
+Solución: File.stream! falla al consumirse, no al crearse. Por eso se comprueba antes con File.regular?/1 y, si no existe, se devuelve {:error, :archivo_no_existe} para que el programa principal muestre un mensaje claro.
+
+4. El grafo solo tiene la conexión en un sentido
+
+Solución: cada conexión debe agregarse dos veces con Map.update/4: Armenia → Pereira y Pereira → Armenia. Como se agrega por la cabeza de la lista, al final se invierte para conservar el orden original del archivo.
+
+5. La búsqueda de rutas se queda en un ciclo
+
+Solución: la función recursiva lleva la lista camino con las ciudades ya visitadas y descarta los vecinos que ya están en ella (Enum.reject). Así una ciudad no aparece dos veces en una ruta y la recursión termina.
+
+
+
+## bitacoras Carlos
+
+1. ¿Cómo hago que la búsqueda de reinas devuelva un Stream y no una lista?
+
+Solución: la función recursiva colocar_reina/3 usa Stream.flat_map sobre las columnas. El caso base devuelve un Stream con la solución y, cuando una columna no es segura, devuelve un Stream vacío. Nada se calcula hasta que alguien consume el Stream.
+
+2. ¿Cómo verifico que una reina nueva es segura?
+
+Solución: se compara con las reinas ya colocadas, usando Enum.with_index(1) para saber a cuántas filas está cada una. Es segura si la columna es distinta y la diferencia de columnas (abs) no es igual a la distancia en filas.
+
+3. ¿Cómo obtengo solo la primera solución para N = 20?
+
+Solución: con Enum.take(soluciones, 1) sobre el Stream. Termina rápido porque la búsqueda es en profundidad y perezosa: se detiene al encontrar la primera hoja válida y nunca evalúa las demás ramas. Calcular todas obliga a recorrer todo el árbol, que crece de forma exponencial.
+
+4. Sale un error al cortar la secuencia por tiempo con Enum.reduce_while
+
+Solución: esa función solo acepta {:cont, acumulador} o {:halt, acumulador}, y la versión inicial devolvía {:error, :ok}. Se resolvió con Stream.take_while, que corta cuando un término supera los 10 segundos. El término que supera el límite sí se calcula completo, porque el tiempo solo se conoce al terminar.
+
+5. El CSV de la secuencia se crea en una carpeta equivocada
+
+Solución: __DIR__ dentro de un módulo de lib/ apunta a lib/, no a la carpeta del problema. Por eso la ruta de salida se construye en el programa principal con Path.join(__DIR__, "salida") y se escribe salida/secuencia_reinas.csv.
+
+
 
 | Archivos | Mensaje |
 |---|---|
