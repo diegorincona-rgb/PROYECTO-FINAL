@@ -4,20 +4,13 @@ defmodule EscritorRutas do
 
   def buscar_rutas(grafo, origen, destino) do
     if Grafo.existe?(grafo, origen) and Grafo.existe?(grafo, destino) do
-      buscar_recursivo(
-        grafo,
-        origen,
-        destino,
-        MapSet.new([origen]),
-        [origen],
-        0
-      )
+      buscar_recursivo(grafo, origen, destino, MapSet.new([origen]), [origen], 0)
     else
       []
     end
   end
 
-  # Caso base: cuando llegamos al destino, encontramos una ruta completa.
+  #Caso base: cuando llegamos al destino, encontramos una ruta completa
   defp buscar_recursivo(_grafo, actual, destino, _visitadas, camino, distancia)
        when actual == destino do
 
@@ -29,24 +22,17 @@ defmodule EscritorRutas do
     ]
   end
 
-  # Caso recursivo: exploramos los vecinos de la ciudad actual.
+  #Caso recursivo: exploramos los vecinos de la ciudad actual
   defp buscar_recursivo(grafo, actual, destino, visitadas, camino, distancia) do
 
     Grafo.vecinos(grafo, actual)
     |> Enum.flat_map(fn {vecino, distancia_conexion} ->
 
-      # Solo avanzamos si la ciudad vecina no ha sido visitada.
+      #Comprueba si la ciudad vecina no ha sido visitada
       if MapSet.member?(visitadas, vecino) do
         []
       else
-        buscar_recursivo(
-          grafo,
-          vecino,
-          destino,
-          MapSet.put(visitadas, vecino),
-          [vecino | camino],
-          distancia + distancia_conexion
-        )
+        buscar_recursivo(grafo, vecino, destino, MapSet.put(visitadas, vecino), [vecino | camino], distancia + distancia_conexion)
       end
     end)
   end
@@ -78,7 +64,7 @@ defmodule EscritorRutas do
     Stream.map(lineas, fn linea -> linea end)
   end
 
-  # Genera los resultados cuando existen rutas.
+  #Genera los resultados cuando existen rutas
   defp generar_resultados([]) do
     [
       "Número de rutas: 0",
@@ -88,7 +74,7 @@ defmodule EscritorRutas do
 
   defp generar_resultados(rutas) do
 
-    # Enumera las rutas para mostrarlas en pantalla y archivo.
+    #Enumera las rutas para mostrarlas en pantalla y archivo
     lineas_rutas =
       rutas
       |> Enum.with_index(1)
@@ -96,25 +82,25 @@ defmodule EscritorRutas do
         "Ruta #{numero}: #{Ruta.a_texto(ruta)}"
       end)
 
-    # Busca la cantidad mínima de ciudades visitadas.
+    #Busca la cantidad mínima de ciudades visitadas
     minimo_ciudades =
       rutas
       |> Enum.map(&Ruta.num_ciudades/1)
       |> Enum.min()
 
-    # Conserva todas las rutas que tienen esa cantidad mínima.
+    #Conserva todas las rutas que tienen esa cantidad mínima
     rutas_mas_cortas =
       Enum.filter(rutas, fn ruta ->
         Ruta.num_ciudades(ruta) == minimo_ciudades
       end)
 
-    # Busca la menor distancia total.
+    #Busca la menor distancia total
     menor_distancia =
       rutas
       |> Enum.map(& &1.distancia)
       |> Enum.min()
 
-    # Conserva las rutas que tienen la menor distancia.
+    #Conserva las rutas que tienen la menor distancia
     rutas_menor_distancia =
       Enum.filter(rutas, fn ruta ->
         ruta.distancia == menor_distancia
@@ -138,7 +124,7 @@ defmodule EscritorRutas do
       ]
   end
 
-  # Convierte las distancias a texto para mostrarlas con máximo dos decimales.
+  #Convierte las distancias a texto para mostrarlas con máximo dos decimales
   defp formato_distancia(numero) when is_integer(numero) do
     Integer.to_string(numero)
   end
